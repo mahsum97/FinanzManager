@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.Spinner;
 
 import java.util.ArrayList;
@@ -20,11 +22,10 @@ public class einnahmeAusgabe extends AppCompatActivity {
         setContentView(R.layout.activity_einnahme_ausgabe);
 
         Spinner dropdown2 = findViewById(R.id.dropDownEinAus);
-       // String[] items2 = new String[]{"Einnahmen", "Ausgaben"};
         List<String> items2= new ArrayList<>();
         items2.add(0,"Einnahmen");
         items2.add("Ausgaben");
-       // ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items2);
+
         final ArrayAdapter<String>adapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, items2);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         dropdown2.setAdapter(adapter);
@@ -47,6 +48,15 @@ public class einnahmeAusgabe extends AppCompatActivity {
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {
 
+            }
+        });
+
+        ImageButton imageButton = (ImageButton) findViewById(R.id.awardButton);
+        imageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(einnahmeAusgabe.this, Award.class);
+                startActivity(intent);
             }
         });
 
