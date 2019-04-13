@@ -44,5 +44,23 @@ public class Investment extends AppCompatActivity {
 
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        ImageButton checkButton = (ImageButton) findViewById(R.id.checkButton2);
+        checkButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(Investment.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        ImageButton cancelButton = (ImageButton) findViewById(R.id.cancelButton2);
+        cancelButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(Investment.this, einnahmeAusgabe.class);
+                startActivity(intent);
+            }
+        });
     }
 }

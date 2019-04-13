@@ -7,13 +7,37 @@
     android:background="#ECF0F2"
     tools:context=".Gambling">
 
+    <ImageButton
+        android:id="@+id/checkButton5"
+        android:layout_width="75dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="265dp"
+        android:layout_marginBottom="11dp"
+        android:background="#ECF0F2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/check_icon_web" />
+
+    <ImageButton
+        android:id="@+id/cancelButton5"
+        android:layout_width="43dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginEnd="280dp"
+        android:layout_marginBottom="32dp"
+        android:background="#ECF0F2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/cancel_icon_web" />
+
     <TextView
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="152dp"
+        android:layout_marginStart="128dp"
         android:layout_marginTop="172dp"
-        android:text="Gambling"
+        android:text="Glücksspiel"
         android:textColor="@android:color/background_dark"
         android:textSize="30sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -27,7 +51,6 @@
         android:layout_marginTop="332dp"
         android:background="#FFFFFF	"
         android:ems="10"
-        android:hint="Amount"
         android:inputType="number"
         android:textColor="#F0000000"
         app:layout_constraintStart_toStartOf="parent"
@@ -41,7 +64,7 @@
         android:layout_marginTop="248dp"
         android:background="#FFFFFF	"
         android:ems="10"
-        android:hint="Description (optional)"
+        android:hint="Beschreibung (optinal)"
         android:inputType="textPersonName"
         android:textColor="#F0000000"
         app:layout_constraintStart_toStartOf="parent"

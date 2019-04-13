@@ -1,6 +1,7 @@
 package com.example.finanzmanager;
 
 import android.app.DatePickerDialog;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -45,6 +46,24 @@ public class Salary extends AppCompatActivity {
 
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        ImageButton checkButton = (ImageButton) findViewById(R.id.checkButton3);
+        checkButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(Salary.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        ImageButton cancelButton = (ImageButton) findViewById(R.id.cancelButton3);
+        cancelButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(Salary.this, einnahmeAusgabe.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override
