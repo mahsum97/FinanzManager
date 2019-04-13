@@ -11,18 +11,19 @@ import android.widget.TextView;
 
 import java.util.Calendar;
 
-public class Award extends AppCompatActivity {
+public class Salary extends AppCompatActivity {
 
     Calendar calendar;
     DatePickerDialog datePickerDialog;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_award);
+        setContentView(R.layout.activity_salary);
 
-        final TextView textView=(TextView) findViewById(R.id.dateView);
-        ImageButton imageButton=(ImageButton) findViewById(R.id.dateButton);
+        final TextView textView=(TextView) findViewById(R.id.dateView5);
+        ImageButton imageButton=(ImageButton) findViewById(R.id.dateButton5);
 
         imageButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -32,7 +33,7 @@ public class Award extends AppCompatActivity {
                 int month = calendar.get(Calendar.MONTH);
                 int year = calendar.get(Calendar.YEAR);
 
-                datePickerDialog = new DatePickerDialog(Award.this, new DatePickerDialog.OnDateSetListener() {
+                datePickerDialog = new DatePickerDialog(Salary.this, new DatePickerDialog.OnDateSetListener() {
                     @Override
                     public void onDateSet(DatePicker datePicker, int mYear, int mMonth, int mDay) {
                         textView.setText(mDay +"."+(mMonth+1)+"."+mYear);
@@ -45,7 +46,6 @@ public class Award extends AppCompatActivity {
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
-
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

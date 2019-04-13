@@ -3,6 +3,7 @@ package com.example.finanzmanager;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -60,6 +61,64 @@ public class einnahmeAusgabe extends AppCompatActivity {
             }
         });
 
+        ImageButton imageButton2 = (ImageButton) findViewById(R.id.gamblingButton);
+        imageButton2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(einnahmeAusgabe.this, Gambling.class);
+                startActivity(intent);
+            }
+        });
 
+        ImageButton imageButton3 = (ImageButton) findViewById(R.id.investmentButton);
+        imageButton3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(einnahmeAusgabe.this, Investment.class);
+                startActivity(intent);
+            }
+        });
+
+        ImageButton imageButton4 = (ImageButton) findViewById(R.id.dividensButton);
+        imageButton4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(einnahmeAusgabe.this, Dividends.class);
+                startActivity(intent);
+            }
+        });
+
+        ImageButton imageButton5 = (ImageButton) findViewById(R.id.refundButton);
+        imageButton5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(einnahmeAusgabe.this, Refund.class);
+                startActivity(intent);
+            }
+        });
+
+        ImageButton imageButton6 = (ImageButton) findViewById(R.id.salaryButton);
+        imageButton6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(einnahmeAusgabe.this, Salary.class);
+                startActivity(intent);
+            }
+        });
+
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+
+        if (id == android.R.id.home){
+            this.finish();
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }
