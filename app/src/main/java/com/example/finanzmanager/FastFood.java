@@ -12,19 +12,18 @@ import android.widget.TextView;
 
 import java.util.Calendar;
 
-public class Gehalt extends AppCompatActivity {
+public class FastFood extends AppCompatActivity {
 
     Calendar calendar;
     DatePickerDialog datePickerDialog;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_gehalt);
+        setContentView(R.layout.activity_fast_food);
 
-        final TextView textView=(TextView) findViewById(R.id.dateView5);
-        ImageButton imageButton=(ImageButton) findViewById(R.id.dateButton5);
+        final TextView textView=(TextView) findViewById(R.id.dateView11);
+        ImageButton imageButton=(ImageButton) findViewById(R.id.dateButton11);
 
         imageButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -34,7 +33,7 @@ public class Gehalt extends AppCompatActivity {
                 int month = calendar.get(Calendar.MONTH);
                 int year = calendar.get(Calendar.YEAR);
 
-                datePickerDialog = new DatePickerDialog(Gehalt.this, new DatePickerDialog.OnDateSetListener() {
+                datePickerDialog = new DatePickerDialog(FastFood.this, new DatePickerDialog.OnDateSetListener() {
                     @Override
                     public void onDateSet(DatePicker datePicker, int mYear, int mMonth, int mDay) {
                         textView.setText(mDay +"."+(mMonth+1)+"."+mYear);
@@ -47,20 +46,20 @@ public class Gehalt extends AppCompatActivity {
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        ImageButton checkButton = (ImageButton) findViewById(R.id.checkButton3);
+        ImageButton checkButton = (ImageButton) findViewById(R.id.checkButton11);
         checkButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent= new Intent(Gehalt.this, MainActivity.class);
+                Intent intent= new Intent(FastFood.this, MainActivity.class);
                 startActivity(intent);
             }
         });
 
-        ImageButton cancelButton = (ImageButton) findViewById(R.id.cancelButton3);
+        ImageButton cancelButton = (ImageButton) findViewById(R.id.cancelButton11);
         cancelButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent= new Intent(Gehalt.this, einnahmeAusgabe.class);
+                Intent intent= new Intent(FastFood.this, Ausgaben.class);
                 startActivity(intent);
             }
         });

@@ -20,7 +20,7 @@ public class Gluecksspiel extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_gambling);
+        setContentView(R.layout.activity_gluecksspiel);
 
         final TextView textView=(TextView) findViewById(R.id.dateView2);
         ImageButton imageButton=(ImageButton) findViewById(R.id.dateButton2);

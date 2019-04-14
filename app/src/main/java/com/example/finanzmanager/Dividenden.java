@@ -20,7 +20,7 @@ public class Dividenden extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_dividends);
+        setContentView(R.layout.activity_dividenden);
 
         final TextView textView=(TextView) findViewById(R.id.dateView3);
         ImageButton imageButton=(ImageButton) findViewById(R.id.dateButton3);

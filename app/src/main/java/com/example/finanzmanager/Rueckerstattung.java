@@ -20,7 +20,7 @@ public class Rueckerstattung extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_refund);
+        setContentView(R.layout.activity_rueckerstattung);
 
         final TextView textView=(TextView) findViewById(R.id.dateView6);
         ImageButton imageButton=(ImageButton) findViewById(R.id.dateButton6);

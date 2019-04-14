@@ -20,7 +20,7 @@ public class Praemie extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_award);
+        setContentView(R.layout.activity_praemie);
 
         final TextView textView=(TextView) findViewById(R.id.dateView);
         ImageButton imageButton=(ImageButton) findViewById(R.id.dateButton);

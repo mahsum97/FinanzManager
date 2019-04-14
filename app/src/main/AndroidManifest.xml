@@ -9,7 +9,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Dividenden"></activity>
+        <activity android:name=".Reisen"></activity>
+        <activity android:name=".Hotel" />
+        <activity android:name=".Fitnessstudio" />
+        <activity android:name=".Lebensmittel" />
+        <activity android:name=".FastFood" />
+        <activity android:name=".Sprit" />
+        <activity android:name=".Kino" />
+        <activity android:name=".Abhebung" />
+        <activity android:name=".Bar" />
+        <activity android:name=".Dividenden" />
         <activity android:name=".Gluecksspiel" />
         <activity android:name=".Gehalt" />
         <activity android:name=".Investition" />

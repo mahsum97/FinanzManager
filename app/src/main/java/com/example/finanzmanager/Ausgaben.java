@@ -7,6 +7,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageButton;
 import android.widget.Spinner;
 
 import java.util.ArrayList;
@@ -50,6 +51,87 @@ public class Ausgaben extends AppCompatActivity {
 
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        ImageButton imageButton = (ImageButton) findViewById(R.id.barButton);
+        imageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(Ausgaben.this, Bar.class);
+                startActivity(intent);
+            }
+        });
+
+        ImageButton imageButton2 = (ImageButton) findViewById(R.id.atmButton);
+        imageButton2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(Ausgaben.this, Abhebung.class);
+                startActivity(intent);
+            }
+        });
+
+        ImageButton imageButton3 = (ImageButton) findViewById(R.id.cinemaButton);
+        imageButton3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(Ausgaben.this, Kino.class);
+                startActivity(intent);
+            }
+        });
+
+        ImageButton imageButton4 = (ImageButton) findViewById(R.id.gasButton);
+        imageButton4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(Ausgaben.this, Sprit.class);
+                startActivity(intent);
+            }
+        });
+
+        ImageButton imageButton5 = (ImageButton) findViewById(R.id.fastFoodButton);
+        imageButton5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(Ausgaben.this, FastFood.class);
+                startActivity(intent);
+            }
+        });
+
+        ImageButton imageButton6 = (ImageButton) findViewById(R.id.groceryButton);
+        imageButton6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(Ausgaben.this, Lebensmittel.class);
+                startActivity(intent);
+            }
+        });
+
+        ImageButton imageButton7 = (ImageButton) findViewById(R.id.gymButton);
+        imageButton7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(Ausgaben.this, Fitnessstudio.class);
+                startActivity(intent);
+            }
+        });
+
+        ImageButton imageButton8 = (ImageButton) findViewById(R.id.hotelButton);
+        imageButton8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(Ausgaben.this, Hotel.class);
+                startActivity(intent);
+            }
+        });
+
+        ImageButton imageButton9 = (ImageButton) findViewById(R.id.travelButton);
+        imageButton9.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent= new Intent(Ausgaben.this, Reisen.class);
+                startActivity(intent);
+            }
+        });
 
     }
 

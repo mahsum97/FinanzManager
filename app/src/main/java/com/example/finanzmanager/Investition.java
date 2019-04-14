@@ -19,7 +19,7 @@ public class Investition extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_investment);
+        setContentView(R.layout.activity_investition);
 
         final TextView textView=(TextView) findViewById(R.id.dateView4);
         ImageButton imageButton=(ImageButton) findViewById(R.id.dateButton4);
