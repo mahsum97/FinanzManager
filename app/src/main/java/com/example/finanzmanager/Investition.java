@@ -4,7 +4,6 @@ import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.DatePicker;
 import android.widget.ImageButton;
@@ -12,7 +11,7 @@ import android.widget.TextView;
 
 import java.util.Calendar;
 
-public class Gambling extends AppCompatActivity {
+public class Investition extends AppCompatActivity {
 
     Calendar calendar;
     DatePickerDialog datePickerDialog;
@@ -20,10 +19,10 @@ public class Gambling extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_gambling);
+        setContentView(R.layout.activity_investment);
 
-        final TextView textView=(TextView) findViewById(R.id.dateView2);
-        ImageButton imageButton=(ImageButton) findViewById(R.id.dateButton2);
+        final TextView textView=(TextView) findViewById(R.id.dateView4);
+        ImageButton imageButton=(ImageButton) findViewById(R.id.dateButton4);
 
         imageButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -33,7 +32,7 @@ public class Gambling extends AppCompatActivity {
                 int month = calendar.get(Calendar.MONTH);
                 int year = calendar.get(Calendar.YEAR);
 
-                datePickerDialog = new DatePickerDialog(Gambling.this, new DatePickerDialog.OnDateSetListener() {
+                datePickerDialog = new DatePickerDialog(Investition.this, new DatePickerDialog.OnDateSetListener() {
                     @Override
                     public void onDateSet(DatePicker datePicker, int mYear, int mMonth, int mDay) {
                         textView.setText(mDay +"."+(mMonth+1)+"."+mYear);
@@ -46,33 +45,22 @@ public class Gambling extends AppCompatActivity {
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        ImageButton checkButton = (ImageButton) findViewById(R.id.checkButton5);
+        ImageButton checkButton = (ImageButton) findViewById(R.id.checkButton2);
         checkButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent= new Intent(Gambling.this, MainActivity.class);
+                Intent intent= new Intent(Investition.this, MainActivity.class);
                 startActivity(intent);
             }
         });
 
-        ImageButton cancelButton = (ImageButton) findViewById(R.id.cancelButton5);
+        ImageButton cancelButton = (ImageButton) findViewById(R.id.cancelButton2);
         cancelButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent= new Intent(Gambling.this, einnahmeAusgabe.class);
+                Intent intent= new Intent(Investition.this, einnahmeAusgabe.class);
                 startActivity(intent);
             }
         });
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
-
-        if (id == android.R.id.home){
-            this.finish();
-        }
-
-        return super.onOptionsItemSelected(item);
     }
 }

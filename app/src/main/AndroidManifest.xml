@@ -9,12 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Dividends"></activity>
-        <activity android:name=".Gambling" />
-        <activity android:name=".Salary" />
-        <activity android:name=".Investment" />
-        <activity android:name=".Refund" />
-        <activity android:name=".Award" />
+        <activity android:name=".Dividenden"></activity>
+        <activity android:name=".Gluecksspiel" />
+        <activity android:name=".Gehalt" />
+        <activity android:name=".Investition" />
+        <activity android:name=".Rueckerstattung" />
+        <activity android:name=".Praemie" />
         <activity android:name=".Ausgaben" />
         <activity android:name=".einnahmeAusgabe" />
         <activity

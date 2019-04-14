@@ -8,7 +8,6 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.Spinner;
 
 import java.util.ArrayList;
@@ -56,7 +55,7 @@ public class einnahmeAusgabe extends AppCompatActivity {
         imageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent= new Intent(einnahmeAusgabe.this, Award.class);
+                Intent intent= new Intent(einnahmeAusgabe.this, Praemie.class);
                 startActivity(intent);
             }
         });
@@ -65,7 +64,7 @@ public class einnahmeAusgabe extends AppCompatActivity {
         imageButton2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent= new Intent(einnahmeAusgabe.this, Gambling.class);
+                Intent intent= new Intent(einnahmeAusgabe.this, Gluecksspiel.class);
                 startActivity(intent);
             }
         });
@@ -74,7 +73,7 @@ public class einnahmeAusgabe extends AppCompatActivity {
         imageButton3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent= new Intent(einnahmeAusgabe.this, Investment.class);
+                Intent intent= new Intent(einnahmeAusgabe.this, Investition.class);
                 startActivity(intent);
             }
         });
@@ -83,7 +82,7 @@ public class einnahmeAusgabe extends AppCompatActivity {
         imageButton4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent= new Intent(einnahmeAusgabe.this, Dividends.class);
+                Intent intent= new Intent(einnahmeAusgabe.this, Dividenden.class);
                 startActivity(intent);
             }
         });
@@ -92,7 +91,7 @@ public class einnahmeAusgabe extends AppCompatActivity {
         imageButton5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent= new Intent(einnahmeAusgabe.this, Refund.class);
+                Intent intent= new Intent(einnahmeAusgabe.this, Rueckerstattung.class);
                 startActivity(intent);
             }
         });
@@ -101,7 +100,7 @@ public class einnahmeAusgabe extends AppCompatActivity {
         imageButton6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent= new Intent(einnahmeAusgabe.this, Salary.class);
+                Intent intent= new Intent(einnahmeAusgabe.this, Gehalt.class);
                 startActivity(intent);
             }
         });

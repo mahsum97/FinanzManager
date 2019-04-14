@@ -12,7 +12,7 @@ import android.widget.TextView;
 
 import java.util.Calendar;
 
-public class Award extends AppCompatActivity {
+public class Praemie extends AppCompatActivity {
 
     Calendar calendar;
     DatePickerDialog datePickerDialog;
@@ -33,7 +33,7 @@ public class Award extends AppCompatActivity {
                 int month = calendar.get(Calendar.MONTH);
                 int year = calendar.get(Calendar.YEAR);
 
-                datePickerDialog = new DatePickerDialog(Award.this, new DatePickerDialog.OnDateSetListener() {
+                datePickerDialog = new DatePickerDialog(Praemie.this, new DatePickerDialog.OnDateSetListener() {
                     @Override
                     public void onDateSet(DatePicker datePicker, int mYear, int mMonth, int mDay) {
                         textView.setText(mDay +"."+(mMonth+1)+"."+mYear);
@@ -50,7 +50,7 @@ public class Award extends AppCompatActivity {
         checkButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent= new Intent(Award.this, MainActivity.class);
+                Intent intent= new Intent(Praemie.this, MainActivity.class);
                 startActivity(intent);
             }
         });
@@ -59,7 +59,7 @@ public class Award extends AppCompatActivity {
         cancelButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent= new Intent(Award.this, einnahmeAusgabe.class);
+                Intent intent= new Intent(Praemie.this, einnahmeAusgabe.class);
                 startActivity(intent);
             }
         });
